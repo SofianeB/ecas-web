@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="ophregistrationservice" namespace="/ophregistrationservice" extends="json-default">	
+		<global-results>
+			<result name="error" type="json">
+				<param name="root">null</param>
+			</result>
+			<result name="input" type="json">
+				<param name="root">null</param>
+			</result>
+		</global-results>
+		<global-exception-mappings>
+			<exception-mapping result="error" exception="java.lang.Exception" />
+		</global-exception-mappings>
+		
+		<action name="insertOphUser" class="oph.registrationservice.actions.json.UserRegistrationAction">
+			<result type="json">
+		    	<param name="root">result</param>
+		   </result>
+		</action>		
+	</package>	
+</struts>
