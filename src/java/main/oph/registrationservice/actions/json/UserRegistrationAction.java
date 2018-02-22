@@ -46,7 +46,7 @@ public class UserRegistrationAction extends ActionSupport {
 	public String execute() throws Exception {
 		
         try {
-                       
+            // test commit
     		prop.load(UserRegistrationAction.class.getClassLoader().getResourceAsStream("config.properties"));
             username = prop.getProperty("username");
             password = prop.getProperty("password");
