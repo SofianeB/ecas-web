@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>ECASLab</title>
+    
+    <script src="//code.jquery.com/jquery-latest.js" type="text/javascript"></script>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/small-business.css" rel="stylesheet">
+    <link href="css/custom_style.css" rel="stylesheet"> 
+    
+    <script type="text/javascript">
+	$(function() {
+		$('img').click(function() {
+			$('.enlargeImageModalSource').attr('src', $(this).attr('src'));
+			$('#enlargeImageModal').modal('show');
+		});
+	});
+	</script>
+	
+	<style>
+    img {
+    cursor: zoom-in;
+	}
+    </style>
+
+  </head>
+
+  <body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark2 fixed-top">
+      <div class="container">
+		<a class="navbar-brand2" href="home.html"><img class="header-image" src="img/ecas_logo.png" alt="ECASLab Logo" width="260px"></a>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="home.html">Home</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="experiments.html">Experiments
+              <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="registration.php">Register</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+        <br>
+    	<div class="row my-4">
+    	<br>
+        <div class="modal fade" id="enlargeImageModal" tabindex="-1" role="dialog" aria-labelledby="enlargeImageModal" aria-hidden="true">
+		    <div class="modal-dialog modal-lg" role="document">
+		      <div class="modal-content">
+		        <div class="modal-header">
+		          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">x</span></button>
+		        </div>
+		        <div class="modal-body">
+		          <img src="" class="enlargeImageModalSource" style="width: 100%;">
+		        </div>
+		      </div>
+		    </div>
+		</div>
+    	
+    	<div class="nav flex-column nav-pills col-lg-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+		  <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-a" role="tab" aria-controls="v-pills-a" aria-selected="true">Length of snow season</a>
+		  <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-b" role="tab" aria-controls="v-pills-b" aria-selected="false">Long-term monthly average of Snow Water Equivalent</a>
+		  <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-c" role="tab" aria-controls="v-pills-c" aria-selected="false">Monthly average of Sea Surface Temperature</a>
+		  <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-d" role="tab" aria-controls="v-pills-d" aria-selected="false">Daily Temperature Range</a>
+		  <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-e" role="tab" aria-controls="v-pills-e" aria-selected="false">Precipitation Trend Analysis</a>
+		</div>
+		<div class="tab-content col-lg-9" id="v-pills-tabContent">
+		  <div class="tab-pane fade show active" id="v-pills-a" role="tabpanel" aria-labelledby="v-pills-home-tab">
+		  	<div align="center"><h2>Length of snow season</h2></div>
+            	<br>
+                <u>Description</u>: Using this workflow it is possible to calculate the lenght of snow season.
+                <br>
+                <br>
+                <u>GitHub repository</u>:<a href="https://github.com/OphidiaBigData/ophidia-workflow-catalogue/tree/master/clipc/snow_off" target="blank"> https://github.com/OphidiaBigData/ophidia-workflow-catalogue/tree/master/clipc/snow_off</a>
+                <br>
+                <br>
+                <u>OphidiaLab repository</u>: ./workflows/snow_off/Lenght_snow_season.json
+                <br>
+                <br>
+                <u>Arguments</u>: (2) number of cores/tasks and "path/to/store/outputData"
+                <br>
+                <br>
+                <u>Example</u>: ./workflows/snow_off/Lenght_snow_season.json 6/home/oph-test/CLIPC
+                <br>
+                <br>
+                <u>Number of tasks</u>: 601
+                <br>
+                <br>
+                <u>Workflow schema:</u>
+                <br>
+                <div align='center'>
+                	<img src='img/snow_season/CLIPC_Lenght_of_snow_season_check.png' height='700px'>
+                </div>
+                <br>
+                <u>Workflow runtime:</u>
+                <br>
+                <div align='center'>
+                	<img src='img/snow_season/CLIPC_Lenght_of_snow_season.png' width='800'>
+                </div>
+                <br>
+                <u>Output (generated with <a href="https://www.giss.nasa.gov/tools/panoply/" target="blank">Panoply</a>)</u>: Three classes of files: i) duration of the snow season in days (starting from the first snow day after July, 1st to the last snow day till June, 30th of the next year); ii) first snow day (snow on); iii) last snow day (snow off).
+                <br>
+                <div align='center'>
+                	<img src='img/snow_season/Length_in_LENGTH_1981_07_1982_07.png' width='700px'>
+                </div>
+                <br>
+                <div align='center'>
+                	<img src='img/snow_season/Snow_on_in_SNOW_ON_1981_07_1982_07.png' width='700px'>
+                </div>
+                <br>
+                <div align='center'>
+                	<img src='img/snow_season/Snow_off_in_SNOW_OFF_1981_07_1982_07.png' width='700px'>
+                </div>
+                <br>
+                <u>Reference</u>: 
+                <br>
+                A. D'Anca, C. Palazzo, D. Elia, S. Fiore, I. Bistinas, K. B&ouml;ttcher, V. Bennett, G. Aloisio, "On the Use of In-Memory Analytics Workflows to Compute eScience Indicators from Large Climate Datasets" - in Proceedings of 1st Workshop on the Integration of Extreme Scale Computing and Big Data Management and Analytics (EBDMA 2017) within the International IEEE/ACM Conference CCGrid 2017 Madrid, Spain, May 14-17, 2017, DOI 10.1109/CCGRID.2017.132
+                <br>
+                <br>
+                Luojus, K. (2015): European Space Agency (ESA) GlobSnow Snow Water Equivalent (SWE) v2.0 products. Finnish Meteorological Institute, date of citation. <a href="http://catalogue.ceda.ac.uk/uuid/2f068226c7164a799cf202d1e7af07b2" target="blank">http://catalogue.ceda.ac.uk/uuid/2f068226c7164a799cf202d1e7af07b2</a>
+		  </div>
+		  <div class="tab-pane fade" id="v-pills-b" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+		  <div align="center"><h2>Long-term monthly average of Snow Water Equivalent</h2></div>
+          	   <br>
+          	   <u>Description</u>: Using this workflow it is possible to calculate the Snow Water Equivalent long-term monthly average.
+               <br>
+               <br>
+               <u>GitHub repository</u>:<a href="https://github.com/OphidiaBigData/ophidia-workflow-catalogue/tree/master/clipc/snow_water_equivalent" target="blank"> https://github.com/OphidiaBigData/ophidia-workflow-catalogue/tree/master/clipc/snow_water_equivalent</a>
+               <br>
+               <br>
+			   <u>OphidiaLab repository</u>: ./workflows/snow_water_equivalent/SWE_monthly_average.json
+               <br>
+               <br>
+               <u>Arguments</u>: (2) number of cores/tasks and "path/to/store/outputData"
+               <br>
+               <br>
+               <u>Example</u>: ./workflows/snow_water_equivalent/SWE_monthly_average.json 6/home/oph-test/CLIPC
+               <br>
+               <br>
+               <u>Number of tasks</u>: 90
+               <br>
+               <br>
+               <u>Workflow schema:</u>
+               <br>
+               <div align='center'>
+               	<img src='img/snow_water_equivalent/CLIPC_SWE_monthly_average_check.png' height='700px'>
+               </div>
+               <br>
+               <u>Workflow runtime:</u>
+               <br>
+               <div align='center'>
+               <img src='img/snow_water_equivalent/CLIPC_SWE_monthly_average.png' width='700px'>
+               </div>
+               <br>
+               <br>
+               <u>Output (generated with <a href="https://www.giss.nasa.gov/tools/panoply/" target="blank">Panoply</a>)</u>: 12 files, one for each month, with the climatological means.
+               <br> 
+               <br>
+               <div align='center'>
+               	<img src='img/snow_water_equivalent/SWE_avg in SWE_AVG_Dec.png' width='700px'>
+               </div>
+               <br>
+               <u>Reference</u>: 
+               <br>
+               A. D'Anca, C. Palazzo, D. Elia, S. Fiore, I. Bistinas, K. B&ouml;ttcher, V. Bennett, G. Aloisio, "On the Use of In-Memory Analytics Workflows to Compute eScience Indicators from Large Climate Datasets" - in Proceedings of 1st Workshop on the Integration of Extreme Scale Computing and Big Data Management and Analytics (EBDMA 2017) within the International IEEE/ACM Conference CCGrid 2017 Madrid, Spain, May 14-17, 2017, DOI 10.1109/CCGRID.2017.132
+				<br>
+               <br>
+               Luojus, K. (2015): European Space Agency (ESA) GlobSnow Snow Water Equivalent (SWE) v2.0 products. Finnish Meteorological Institute, date of citation. <a href="http://catalogue.ceda.ac.uk/uuid/2f068226c7164a799cf202d1e7af07b2" target="blank">http://catalogue.ceda.ac.uk/uuid/2f068226c7164a799cf202d1e7af07b2</a>
+		  </div>
+		  <div class="tab-pane fade" id="v-pills-c" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+		  <div align="center"><h2>Monthly average of Sea Surface Temperature</h2></div>
+          		<br>
+               <u>Description</u>: This workflow evaluates monthly mean sea surface temperature. It works on a datacube (SST variable).
+               <br>
+               <br>
+               <u>GitHub repository</u>:<a href=" https://github.com/OphidiaBigData/ophidia-workflow-catalogue/tree/master/clipc/sea_surface_temperature" target="blank">  https://github.com/OphidiaBigData/ophidia-workflow-catalogue/tree/master/clipc/sea_surface_temperature</a>
+               <br>
+               <br>
+			   <u>OphidiaLab repository</u>: ./workflows/sea_surface_temperature/forGlobal_SST_Monthly_Average.json
+               <br>
+               <br>
+               <u>Arguments</u>: (2) number of cores/tasks and "path/to/store/outputData"
+               <br>
+               <br>
+               <u>Example</u>: ./workflows/sea_surface_temperature/forGlobal_SST_Monthly_Average.json 6/home/oph-test/CLIPC
+               <br>
+               <br>
+               <u>Number of tasks</u>: 76
+               <br>
+               <br>
+               <u>Workflow schema:</u>
+               <br>
+               <br>
+               <div align='center'>
+               	<img src='img/sea_surface_temperature/CLIPC_SST_check.png' height='700px'>
+               </div>
+               <br>
+               <u>Workflow runtime:</u>
+               <br>
+               <br>
+               <div align='center'>
+               <img src='img/sea_surface_temperature/CLIPC_SST.png' width='700px'>
+               </div>
+               <br>
+               <u>Output (generated with <a href="https://www.giss.nasa.gov/tools/panoply/" target="blank">Panoply</a>)</u>: Three classes of files: i) climatological means month by month (12 files); ii) single monthly data (1 file); iii) anomaly compared to the long-term average (1 file).
+               <br>
+               <div align='center'>
+               <img src='img/sea_surface_temperature/SST_output.jpg' width='700px'>
+               </div>
+               <br>
+               <u>Reference</u>: 
+               <br>
+               A. D'Anca, C. Palazzo, D. Elia, S. Fiore, I. Bistinas, K. B&ouml;ttcher, V. Bennett, G. Aloisio, "On the Use of In-Memory Analytics Workflows to Compute eScience Indicators from Large Climate Datasets" - in Proceedings of 1st Workshop on the Integration of Extreme Scale Computing and Big Data Management and Analytics (EBDMA 2017) within the International IEEE/ACM Conference CCGrid 2017 Madrid, Spain, May 14-17, 2017, DOI 10.1109/CCGRID.2017.132
+               <br>
+               <br>
+               Merchant, C.J.; Embury, O.; Roberts-Jones, J.; Fiedler, E.K.; Bulgin, C.E.; Corlett, G.K.; Good, S.; McLaren, A.; Rayner, N.A.; Donlon, C. (2014): ESA Sea Surface Temperature Climate Change Initiative (ESA SST CCI): Analysis long term product version 1.0. NERC Earth Observation Data Centre, 24 February 2014. doi:10.5285/878bef44-d32a-40cd-a02d-49b6286f0ea4. <a href="http://dx.doi.org/10.5285/878bef44-d32a-40cd-a02d-49b6286f0ea4" target="blank">http://dx.doi.org/10.5285/878bef44-d32a-40cd-a02d-49b6286f0ea4</a>
+		  </div>
+		  <div class="tab-pane fade" id="v-pills-d" role="tabpanel" aria-labelledby="v-pills-settings-tab">
+		  <div align="center"><h2>Daily Temperature Range</h2></div>
+           	   <br>
+           	   <u>Description</u>: The daily temperature range is the arithmetic difference between daily maximum and daily minimum temperature.
+           	   <br>
+           	   <br>
+           	   <u>GitHub repository</u>: <a href=" https://github.com/OphidiaBigData/ophidia-workflow-catalogue/tree/master/dtr" target="blank">  https://github.com/OphidiaBigData/ophidia-workflow-catalogue/tree/master/dtr</a>
+			   <br>
+               <br>
+               <u>OphidiaLab repository</u>: ./workflows/daily_temperature_range/dtr_anomaly.json
+               <br>
+               <br>
+               <u>Arguments</u>: number of cores; model name; spatial subset; time subset in the past; time subset in the future; output grid
+               <br>
+               <br>
+               <u>Example</u>: ./dtr_anomaly.json 8 CMCC-CM -90:90|0:360 1970_2000 2070_2100 r360x180
+               <br>
+               <br>
+               <u>Number of tasks</u>: 65
+               <br>
+               <br>
+               <u>Workflow schema:</u>
+               <br>
+               <br>
+               <div align='center'>
+           	   <img src='img/dtr/dtr_anomaly_check.png' height='700px'>
+           	   </div>
+               <br>
+               <u>Workflow runtime:</u>
+               <br>
+               <br>
+               <div align='center'>
+           	   <img src='img/dtr/dtr_anomaly.png' width='700px'>
+           	   </div>
+           	   <br>
+               <u>Output (generated with <a href="https://www.giss.nasa.gov/tools/panoply/" target="blank">Panoply</a>)</u>: 
+               <br>
+               <br>
+               <div align='center'>
+           	   <img src='img/dtr/DTR_output.png' id='img' width='700px'>
+           	   </div>
+           	   <br>
+		  </div>
+		  <div class="tab-pane fade" id="v-pills-e" role="tabpanel" aria-labelledby="v-pills-settings-tab">
+		  <div align="center"><h2>Precipitation Trend Analysis</h2></div>
+               <br>
+               <u>Description</u>: Precipitation trend analysis, on different spatial and temporal scales, has received notable attention during the past century due to its relations with global climate change stated by the scientific community. For this reason, a number of models for this atmospheric variable have been defined.
+               <br>
+               <br>
+               <u>GitHub repository</u>:<a href="https://github.com/OphidiaBigData/ophidia-workflow-catalogue/blob/master/indigo/precip_trend_analisys/optimized_precip_trend_analysis.json" target="blank"> https://github.com/OphidiaBigData/ophidia-workflow-catalogue/blob/master/indigo/precip_trend_analisys/optimized_precip_trend_analysis.json</a>
+               <br>
+               <br>
+               <u>OphidiaLab repository</u>: ./workflows/precip_trend_analisys/optimized_precip_trend_analysis.json 
+               <br>
+               <br>
+               <u>Arguments</u>: number of cores; model name; spatial subset; time subset in the past; time subset in the future; output grid; import type (optional); I/O server type (optional)
+               <br>
+               <br>
+               <u>Example</u>: ./optimized_precip_trend_analysis.json 2 CMCC-CM|CMCC-CMS rcp85 day 0.9 1976_2006 2071_2101 -90:90|0:360 r360x180
+               <br>
+               <br>
+               <u>Number of tasks</u>: 77
+               <br>
+               <br>
+               <u>Workflow schema:</u>
+               <br>
+               <div align='center'>
+               <img src='img/pta/precip_trend_analysis_check.svg' height='700px'>
+               </div>
+               <br>
+               <u>Workflow runtime:</u>
+               <br>
+               <div align='center'>
+               <img src='img/pta/precip_trend_analysis.svg' id='img' height='800px'>
+               </div>
+               <br>
+               <u>Output:</u> 5 png files: maximum temperature, minimum temperature, average, standard deviation, variance
+               <br>
+               <div align='center'>
+               <img src='img/pta/max.png' id='img' width='700px'>
+               </div>
+               <br>
+               <u>Reference</u>: 
+               S. Fiore, M. Plociennik, C. Doutriaux, C. Palazzo, J. Boutte, T. Zok, D. Elia, M. Owsiak, A. D'Anca, Z. Shaheen, R. Bruno, M Fargetta, M. Caballer, G. Molt&oacute; , I. Blanquer, R. Barbera, M. David, G. Donvito, D. N. Williams, V. Anantharaj, D. Salomoni, G. Aloisio - "Distributed and cloud-based multi-model analytics experiments on large volumes of climate change data in the Earth System Grid Federation eco-system" - in Proceedings of Workshop "Big Data Challenges, Research, and Technologies in the Earth and Planetary Sciences" within the 2016 IEEE International Big Data Conference, pp. 2911-2918, 5-8 December 2016, Washington D.C., USA.  
+               <br> 
+		  </div>
+		</div>
+      	</div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; ECASLab 2018</p>
+        <p class="m-0 text-center text-white">Contact us at ecas-support [at]cmcc [dot] it and subscribe to our user mailing list to get regularly updated on the latest news about ECASLab</p>
+      </div>
+      <!-- /.container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  </body>
+
+</html>
