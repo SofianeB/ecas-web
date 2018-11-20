@@ -24,9 +24,10 @@
   <body>
 
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark2 fixed-top">
       <div class="container">
-		<a class="navbar-brand" href="home.html"><img class="header-image" src="img/ecas_logo.png" alt="ECASLab Logo" width="100px"></a>
+		<a class="navbar-brand" href="home.html"><img class="header-image" src="img/ecas_logo.png" alt="ECASLab Logo" width="260px"></a>&nbsp;&nbsp;&nbsp;
+	<a class="navbar-brand2" href="https://www.cmcc.it"><img class="header-image" src="img/institute.png" width="200px" alt="Institute Logo"></a>
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             
@@ -38,7 +39,7 @@
 	<div class="container">
 	  <div class="row">
         <div class="col-lg-12">       
-            <div class="card-body">
+            <div class="card-body"><br><br>
               <h2 class="card-title" align="center">ECASLab registration completed!</h2>
 				<p align="center">Thanks for registering. You'll receive a confirmation email soon.</p>
             </div>
