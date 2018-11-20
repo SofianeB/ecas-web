@@ -84,7 +84,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark2 fixed-top">
       <div class="container">
 		<a class="navbar-brand2" href="home.html"><img class="header-image" src="img/ecas_logo.png" alt="ECASLab Logo" width="260px"></a>&nbsp;&nbsp;&nbsp;
-	<a class="navbar-brand2" href="https://www.cmcc.it"><img class="header-image" src="img/institute.png" width="200px" alt="Institute Logo"></a>
+	<a class="navbar-brand2" href=""><img class="header-image" src="img/institute.png" width="200px" alt="Institute Logo"></a>
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
