@@ -9,7 +9,7 @@
     <meta name="author" content="">
 
     <title>ECASLab</title>
-    
+
     <script src="//code.jquery.com/jquery-latest.js" type="text/javascript"></script>
 
     <!-- Bootstrap core CSS -->
@@ -18,14 +18,14 @@
     <!-- Custom styles for this template -->
     <link href="css/small-business.css" rel="stylesheet">
     <link href="css/custom_style.css" rel="stylesheet">
-    
+
     <style>
     img {
     cursor: zoom-in;
 	}
-		
+
     </style>
-    
+
     <script type="text/javascript">
 		$(function() {
 			$('img').click(function() {
@@ -43,8 +43,8 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark2 fixed-top">
       <br>
       <div class="container">
-        <a class="navbar-brand2" href="home.html"><img class="header-image" src="img/ecas_logo.png" alt="ECASLab Logo" width="260px"></a>&nbsp;&nbsp;&nbsp;
-	<a class="navbar-brand2" href="" target="blank"><img class="header-image" src="img/institute.png" width="200px" alt="Institute Logo"></a>
+        <a class="navbar-brand" href="home.html"><img class="header-image" src="img/ecas_logo_cmcc.png" alt="ECASLab Logo" width="260px"></a>&nbsp;&nbsp;&nbsp;
+	<a class="navbar-brand2" href="http://www.dkrz.de" target="blank"><img class="header-image" src="img/institute.png" width="195px" alt="Institute Logo"></a>
 
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
@@ -57,7 +57,7 @@
               <a class="nav-link" href="experiments.html">Experiments</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="registration.php">Register</a>
+              <a class="nav-link" href="registerproc.html">Register</a>
             </li>
           </ul>
         </div>
@@ -83,11 +83,11 @@
 		    </div>
 		</div>
         <div class="col-lg-4">
-          
+
           <p>ECASLab is a scientific data analytics environment built on top of ECAS (the ENES Climate Analytics Service), one of the thematic services included in the EOSC-hub service portfolio.</p>
           <p>It provides a scientific environment exploiting a server-side approach and integrating both data and analysis tools to support data scientists in their daily research activities.</p>
-          <p>ECASLab starts from a previous effort (OphidiaLab, developed at <a href="https://www.cmcc.it" target="blank">CMCC Foundation</a>) 
-	            	with the main aim of providing a virtualized research environment for researchers. It represents the entry point 
+          <p>ECASLab starts from a previous effort (OphidiaLab, developed at <a href="https://www.cmcc.it" target="blank">CMCC Foundation</a>)
+	            	with the main aim of providing a virtualized research environment for researchers. It represents the entry point
 	            	for users that want to test, train, exploit the ECAS Thematic Service.</p>
          <!--  <a class="btn btn-primary btn-lg text-center" href="quickstart.html">Quick Start</a> -->
         </div>
@@ -98,9 +98,9 @@
           </div>
         </div>
         <div class="col-lg-12">
-      		<p>It consists of several components like an ECAS cluster, 
-					a JupyterHub instance jointly with a large set of pre-installed Python libraries for running data manipulation, 
-					analysis, and visualization, a data publication service and a tool for the infrastructure monitoring 
+      		<p>It consists of several components like an ECAS cluster,
+					a JupyterHub instance jointly with a large set of pre-installed Python libraries for running data manipulation,
+					analysis, and visualization, a data publication service and a tool for the infrastructure monitoring
 					(mainly intended for the administrators).</p>
       	</div>
       </div>
@@ -108,8 +108,8 @@
       <!-- Call to Action Well -->
       <div class="card text-white bg-secondary my-4 text-center">
         <div class="card-body">
-          <p class="text-white m-0">In order to get started with ECASLab please have a look at the Quick Start section 
-          and register <a href="registration.php">here</a> to get an account.</p>
+          <p class="text-white m-0">In order to get started with ECASLab please have a look at the Quick Start section
+          and register <a href="registerproc.html">here</a> to get an account.</p>
         </div>
       </div>
 
@@ -118,7 +118,7 @@
           <div class="card h-100">
             <div class="card-body">
               <h2 class="card-title" align="center" id="quickstart">Quick Start</h2>
-                <div class="row"> 
+                <div class="row">
 		        <div class="col-sm-12">
 		        	<p>ECASLab provides two different ways to get access to its scientific eco-system: <b>JupyterHub</b> and <b>Ophidia client</b>.</p>
 		      		<br>
@@ -126,20 +126,27 @@
 		      	</div>
 				<div class="row">
 		        <div class="col-sm-6">
-		          	<div><p><b><a href="http://jupyter.org/documentation.html" target="blank">Jupyter</a></b> supports interactive data science and scientific computing. 
+		          	<div><p><b><a href="http://jupyter.org/documentation.html" target="blank">Jupyter</a></b> supports interactive data science and scientific computing.
 		          			<br>
-		          			ECASLab includes a JupyterHub installation and, thanks to the Jupyter Notebooks, 
-		          			scientists can create and share documents that contain live code, equations, visualizations 
-		          			and explanatory text. 
-		          			<br>
-		          			<br>
-		          			The JupyterHub interface is available <a href="https://ophidialab.cmcc.it/jupyter" target="blank">here</a>*.
+		          			ECASLab includes a JupyterHub installation and, thanks to the Jupyter Notebooks,
+		          			scientists can create and share documents that contain live code, equations, visualizations
+		          			and explanatory text.
 		          			<br>
 		          			<br>
-		          			After you login, open &quot;Quick Start.ipynb&quot; notebook available under the <i>quickstart/</i> folder in your home to get started with OphidiaLab environment capabilities.
+                    There are two JupyterHub instances depending on your registration preferences.
+                    <ul>
+                      <li>if you have DKRZ account, use this <a href="https://ecaslab.dkrz.de/jupyter/" target="blank">link</a></li>
+                        <li>if you want to use EOSC-hub AAI, use this <a href="https://ecas-jupyter.dkrz.de/jupyter/" target="blank">link</a></li>
+                      </ul>
+                      <br>
+  		          			*<i>Please note that in both instances, it is possible to register new accounts.</i>
+
 		          			<br>
 		          			<br>
-		          			*<i>Please note that for security reasons, the access to our JupyterHub instance is restricted 
+		          			After you login, open &quot;Quick Start.ipynb&quot; notebook available under the <i>quickstart/</i> folder in your home to get started with ECASLab environment capabilities.
+		          			<br>
+		          			<br>
+		          			*<i>Please note that for security reasons, the access to our JupyterHub instance is restricted
 		          			to authorised users only and needs an additional step after the registration process.</i></p></div>
 		          	<br>
 					<div align="center"><img src="img/oph_term1.png" width="450px"></div>
@@ -156,30 +163,32 @@
 		          	<p>
 		          	<br>
 		          	<br>
-		          	The Ophidia Terminal is a robust, comprehensive, and user-friendly Ophidia client, 
-		          	developed with characteristics similar to the bash shell present in almost all Unix-like environments. 
+		          	The Ophidia Terminal is a robust, comprehensive, and user-friendly Ophidia client,
+		          	developed with characteristics similar to the bash shell present in almost all Unix-like environments.
 		          	<br>
-					Please have a look at the online available documentation to learn more about the basic 
-					functionalities of the <a href="http://ophidia.cmcc.it/documentation/users/terminal/term_basic.html" target="blank">Ophidia terminal</a> 
+					Please have a look at the online available documentation to learn more about the basic
+					functionalities of the <a href="http://ophidia.cmcc.it/documentation/users/terminal/term_basic.html" target="blank">Ophidia terminal</a>
 					as well as some <a href="http://ophidia.cmcc.it/documentation/users/terminal/term_advanced.html" target="blank">advanced features</a> useful for more skilled users.
 					<br>
 					Two short guides (<a href="contents/Oph_Term_Part1.pdf" target="blank">basic</a>, <a href="contents/Oph_Term_Part2.pdf" target="blank">advanced</a>) in pdf format are also available.
 					<br>
 					Several examples of real-world usage of the terminal are also available on the Ophidia website tutorial section.
 		          	<br>
-		          	The latest client RPM for CentOS7 is available <a href="https://download.ophidia.cmcc.it/rpm/1.0/ophidia-terminal-1.0.0-0.el7.centos.x86_64.rpm" target="blank">here</a>.  
+		          	The latest client RPM for CentOS7 is available <a href="https://download.ophidia.cmcc.it/rpm/1.0/ophidia-terminal-1.0.0-0.el7.centos.x86_64.rpm" target="blank">here</a>.
 		          	<br>
-		          	The related DEB package can be downloaded from <a href="https://download.ophidia.cmcc.it/deb/1.0/ophidia-terminal_1.0.0-0_amd64.deb" target="blank">here</a>. 
+		          <!--	The related DEB package can be downloaded from <a href="https://download.ophidia.cmcc.it/deb/1.0/ophidia-terminal_1.0.0-0_amd64.deb" target="blank">here</a>.
 		          	<br>
 		          	<br>
 		          	Once installed you can simply run:
 		          	<br>
 					<p><i>/usr/local/ophidia/oph-terminal/bin/oph_term -H ophidialab.cmcc.it -u &lt;username&gt; -p &lt;password&gt; -P 11732</i></p>
-		
-					where <i>&lt;username&gt;</i> and <i>&lt;password&gt;</i> are the ones you will get through the registration process.
+
+					where <i>&lt;username&gt;</i> and <i>&lt;password&gt;</i> are the ones you will get through the registration process.-->
 					<br>
 					A comprehensive user guide about the Ophidia Terminal is available <a href="http://ophidia.cmcc.it/documentation/users/terminal/index.html" target="blank">here</a>.
-		          	<br>
+<br>
+                <br>
+                *<i>Please note that at DKRZ the Ophidia Terminal is only available through ECASLab and can be started from Jupyter GUI. </i></p></div>
 		          	</div>
 		        </div>
 		        </div>
@@ -189,7 +198,7 @@
       </div>
       <br>
       <div class="row">
-        <div class="col-lg-8">       
+        <div class="col-lg-8">
           <div class="card h-100">
             <div class="card-body">
               <h2 class="card-title" align="center">JupyterHub</h2>
@@ -217,29 +226,12 @@
         <div class="col-lg-12">
           <div class="card h-100">
             <div class="card-body">
-              <h2 class="card-title">Monitoring</h2>
-              <p class="card-text">The Ophidia framework allows the concurrent execution of single operators, 
-               massive tasks and workflows of tasks. In this context, it is critical to 
-               monitor the cluster resources usage and activity from both an infrastructural and an application-level point of view.
-               The environment includes an instance of the Grafana monitoring system, 
-			   which allows the definition of interactive dashboards summarising some relevant metrics, like: 
-			   <ul class="">
-       			<li>&nbsp;system load average (1/5/15 min.);</li>
-       			<li>&nbsp;ram, swap and disk usage;</li>
-       			<li>&nbsp;workflows progress ratio (percentage of workflow completed); </li>
-       			<li>&nbsp;number of concurrent workflows and tasks in running and pending states; </li>
-       			<li>&nbsp;cores used;</li>
-       			<li>&nbsp;services status.</li>
-          	   </ul>
+              <h2 class="card-title">Technical documentation</h2>
+              <p class="card-text">For more details about ECAS/ECASLab and their components, please visit the technical documentation <a target="_blank" rel="noopener noreferrer" href="https://ee-docs.readthedocs.io/en/latest/">here.</a>
+
 			   </p>
 			   <br>
-	           <div align="center"><img src="img/application_metrics.png" width="700px"></div>
-	           <br>
-	           <br>
-	           <div align="center"><img src="img/infrastructure_metrics.png" width="700px"></div>
-	           <br>
-            </div>
-          </div>
+	            </div>
         </div>
       </div>
     </div>
@@ -249,11 +241,11 @@
     <footer class="py-5 bg-dark">
       <div class="container">
         <p class="m-0 text-center text-white">Copyright &copy; ECASLab 2018</p>
-        <p class="m-0 text-center text-white">Contact us at ecas-support [at]cmcc [dot] it and subscribe to our user mailing list to get regularly updated on the latest news about ECASLab</p>
+        <p class="m-0 text-center text-white">Contact us at ecas-support [at]dkrz [dot] de </p>
       </div>
       <!-- /.container -->
     </footer>
-    
+
     <!-- jQuery -->
     <script src="vendor/jquery/jquery.min.js"></script>
 
